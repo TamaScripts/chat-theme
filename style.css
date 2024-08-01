@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: inherit;
+}
+
+.chat-window {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 20rem !important;
+    background-color: rgba(22, 22, 22, 0.75) !important;
+    border-radius: calc(5px + 0.25rem);
+    padding: 0.25rem;
+    text-align: left;
+    user-select: none;
+    transition-property: all;
+    transition-duration: 300ms;
+    filter: opacity(1);
+}
+
+.chat-window[class*="hidden"] {
+    animation-duration: 300ms !important;
+    filter: opacity(0);
+}
+
+.msg {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-size: calc(20px);
+    margin-bottom: 0;
+}
+
+.chat-messages {
+    margin: 0;
+    height: 100%;
+}
+
+.msg>span>span>b {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    vertical-align: baseline;
+    line-height: 1;
+}
+
+.msg>span>span>span {
+    vertical-align: baseline;
+}
+
+.msg i:first-of-type {
+    font-style: normal;
+    color: #c0c0c0;
+}
+
+.chat-input {
+    position: absolute;
+    top: calc(100% - 2rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: inherit !important;
+    text-align: right;
+    height: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.chat-input>div {
+    background-color: rgba(22, 22, 22, 0.85) !important;
+    padding: 0.25rem;
+    border-radius: calc(5px + 0.25rem);
+}
+
+.chat-input .prefix {
+    display: none;
+}
+
+.chat-input>div+div {
+    position: absolute;
+    bottom: 2.5rem;
+    width: 100%;
+
+    text-align: left;
+}
+
+.input {
+    transition-duration: 150ms !important;
+    filter: opacity(1) !important;
+}
+
+.input[style*="display: none"] {
+    animation-duration: 150ms !important;
+    filter: opacity(0) !important;
+    display: block !important;
+}
+
+.suggestions {
+    padding: 0.25rem;
+    background: transparent;
+}
+
+.suggestions>.suggestion {
+    background-color: rgba(13, 13, 13, 0.85);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.suggestions>.suggestion:last-child {
+    margin-bottom: 0;
+}
+
+.chat-hide-state {
+    position: absolute !important;
+    left: 50% !important;
+    top: calc(100% - 2rem) !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+    padding: 0.25rem !important;
+    width: 16rem !important;
+    margin-left: 0 !important;
+    bottom: auto !important;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    filter: opacity(1);
+}
+
+.chat-hide-state[style*="display: none"],
+.chat-hide-state[style*="display: block"] {
+    top: 130% !important;
+    animation-duration: 300ms !important;
+    display: block !important;
+    filter: opacity(0);
+}
+
+textarea {
+    background: transparent;
+    padding: 0.5vh;
+    resize: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
